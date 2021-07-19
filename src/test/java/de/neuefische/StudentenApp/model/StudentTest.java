@@ -70,4 +70,30 @@ class StudentTest {
         // Then
         assertEquals("Hans Peter 23 true", actual);
     }
+
+    @Test
+    public void equalsTestWithEqualObjects(){
+        // Given
+        Student student1 = new Student("Hans", "Peter", 23);
+        Student student2 = new Student("Hans", "Peter", 23);
+
+        //When
+        boolean actual = student1.equals(student2);
+
+        // Then
+        assertTrue(actual);
+    }
+
+    @Test
+    public void equalsTestWithTwoDifferentObjects(){
+        // Given
+        Student student1 = new Student("Hans", "Peter", 23);
+        Student student2 = new Student("Peter", "Maier", 25);
+
+        //When
+        boolean actual = student1.equals(student2);
+
+        // Then
+        assertFalse(actual);
+    }
 }
