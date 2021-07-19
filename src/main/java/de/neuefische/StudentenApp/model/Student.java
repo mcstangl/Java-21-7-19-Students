@@ -1,3 +1,5 @@
+package de.neuefische.StudentenApp.model;
+
 public class Student {
 
     private String firstName;
@@ -5,6 +7,13 @@ public class Student {
     private int age;
     private boolean isQualified;
 
+
+    public Student(String firstName, String lastName, int age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+
+    }
 
     public String getFirstName() {
         return firstName;
@@ -36,5 +45,9 @@ public class Student {
 
     public void setQualified(boolean qualified) {
         isQualified = qualified;
+    }
+
+    public String toString(){
+        return firstName + " " + lastName + " "  + age + " " + isQualified;
     }
 }
