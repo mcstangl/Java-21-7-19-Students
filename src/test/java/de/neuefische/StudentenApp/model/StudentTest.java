@@ -60,6 +60,7 @@ class StudentTest {
 
     @Test
     public void toStringTest(){
+        // Given
         Student testStudent = new Student("Hans", "Peter", 23);
         testStudent.setQualified(true);
 
