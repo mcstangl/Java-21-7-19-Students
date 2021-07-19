@@ -47,6 +47,7 @@ public class Student {
         isQualified = qualified;
     }
 
+    @Override
     public String toString(){
         return firstName + " " + lastName + " "  + age + " " + isQualified;
     }
