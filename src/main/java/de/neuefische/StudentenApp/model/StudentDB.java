@@ -41,24 +41,29 @@ public class StudentDB {
     }
 
     public void removeStudent(Student student) {
-        int k = 0;
-        for (int i = 0; i < students.length; i++) {
-            if (students[i].equals(student)) {
-                k++;
-            }
-        }
-        if (k == 0) {
+        if (countStudentInDatabase(student) == 0) {
             return;
         }
-        Student[] arrayOfStudents = new Student[students.length - k];
-        int j = 0;
+        Student[] arrayOfStudents = new Student[students.length - countStudentInDatabase(student)];
+        int newStudentArrayIndex = 0;
         for (int i = 0; i < students.length; i++) {
             if (!students[i].equals(student)) {
-                arrayOfStudents[j] = students[i];
-                j++;
+                arrayOfStudents[newStudentArrayIndex] = students[i];
+                newStudentArrayIndex++;
             }
+
         }
         this.students = arrayOfStudents;
 
+    }
+
+    private int countStudentInDatabase(Student student) {
+        int amountOfStudentsToBeRemoved = 0;
+        for (int i = 0; i < students.length; i++) {
+            if (students[i].equals(student)) {
+                amountOfStudentsToBeRemoved++;
+            }
+        }
+        return amountOfStudentsToBeRemoved;
     }
 }
