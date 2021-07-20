@@ -36,10 +36,10 @@ class StudentTest {
     public void setterGetterAgeTest(){
         // Given
         Student testStudent = new Student("Hans", "Peter", 23);
-        testStudent.setAge(23);
+        testStudent.setId(23);
 
         // When
-        int actual = testStudent.getAge();
+        int actual = testStudent.getId();
 
         // Then
         assertEquals(23, actual);
