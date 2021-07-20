@@ -25,16 +25,16 @@ class StudentDBTest {
     public void shouldReturnArrayOfStudents() {
         // Given
         Student[] students = {student1, student2, student3};
-        Student[] expected = {
-                new Student("Hans", "Maier", 1),
-                new Student("Markus", "Schneider", 2),
-                new Student("Peter", "Heiner", 3)};
         StudentDB studentDB = new StudentDB(students);
 
         // When
         Student[] actual = studentDB.list();
 
         //Then
+        Student[] expected = {
+                new Student("Hans", "Maier", 1),
+                new Student("Markus", "Schneider", 2),
+                new Student("Peter", "Heiner", 3)};
         assertArrayEquals(expected, actual);
     }
 
@@ -43,12 +43,12 @@ class StudentDBTest {
         // Given
         Student[] students = {student1, student2, student3};
         StudentDB studentDB = new StudentDB(students);
-        String expected = "Hans Maier ID: 1\nMarkus Schneider ID: 2\nPeter Heiner ID: 3\n";
 
         // When
         String actual = studentDB.toString();
 
         // Then
+        String expected = "Hans Maier ID: 1\nMarkus Schneider ID: 2\nPeter Heiner ID: 3\n";
         assertEquals(expected, actual);
 
     }
@@ -58,17 +58,17 @@ class StudentDBTest {
         // Given
         Student[] students = {student1, student2, student3};
         StudentDB studentDB = new StudentDB(students);
-        Student[] expected = {
-                new Student("Hans", "Maier", 1),
-                new Student("Markus", "Schneider", 2),
-                new Student("Peter", "Heiner", 3),
-                new Student("Horst", "König", 4)};
 
         // When
         studentDB.addStudent(student4);
         Student[] actual = studentDB.list();
 
         // Then
+        Student[] expected = {
+                new Student("Hans", "Maier", 1),
+                new Student("Markus", "Schneider", 2),
+                new Student("Peter", "Heiner", 3),
+                new Student("Horst", "König", 4)};
         assertArrayEquals(expected, actual);
     }
 
@@ -81,12 +81,12 @@ class StudentDBTest {
         // When
         studentDB.removeStudent(student4);
         Student[] actual = studentDB.list();
+
+        // Then
         Student[] expected = {
                 new Student("Hans", "Maier", 1),
                 new Student("Markus", "Schneider", 2),
                 new Student("Peter", "Heiner", 3)};
-
-        // Then
         assertArrayEquals(expected, actual);
     }
 
@@ -99,12 +99,12 @@ class StudentDBTest {
         // When
         studentDB.removeStudent(student4);
         Student[] actual = studentDB.list();
+
+        // Then
         Student[] expected = {
                 new Student("Hans", "Maier", 1),
                 new Student("Markus", "Schneider", 2),
                 new Student("Peter", "Heiner", 3)};
-
-        // Then
         assertArrayEquals(expected, actual);
     }
 
@@ -117,12 +117,12 @@ class StudentDBTest {
         // When
         studentDB.removeStudent(student4);
         Student[] actual = studentDB.list();
+
+        // Then
         Student[] expected = {
                 new Student("Hans", "Maier", 1),
                 new Student("Markus", "Schneider", 2),
                 new Student("Peter", "Heiner", 3)};
-
-        // Then
         assertArrayEquals(expected, actual);
     }
 
