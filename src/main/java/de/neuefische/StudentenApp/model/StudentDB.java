@@ -32,28 +32,28 @@ public class StudentDB {
     }
 
     public void addStudent(Student student) {
-        Student[] arrayOfStudents = new Student[students.length + 1];
+        Student[] newArrayOfStudents = new Student[students.length + 1];
         for (int i = 0; i < students.length; i++) {
-            arrayOfStudents[i] = students[i];
+            newArrayOfStudents[i] = students[i];
         }
-        arrayOfStudents[arrayOfStudents.length - 1] = student;
-        this.students = arrayOfStudents;
+        newArrayOfStudents[newArrayOfStudents.length - 1] = student;
+        this.students = newArrayOfStudents;
     }
 
     public void removeStudent(Student student) {
         if (countStudentInDatabase(student) == 0) {
             return;
         }
-        Student[] arrayOfStudents = new Student[students.length - countStudentInDatabase(student)];
+        Student[] newArrayOfStudents = new Student[students.length - countStudentInDatabase(student)];
         int newStudentArrayIndex = 0;
         for (int i = 0; i < students.length; i++) {
             if (!students[i].equals(student)) {
-                arrayOfStudents[newStudentArrayIndex] = students[i];
+                newArrayOfStudents[newStudentArrayIndex] = students[i];
                 newStudentArrayIndex++;
             }
 
         }
-        this.students = arrayOfStudents;
+        this.students = newArrayOfStudents;
 
     }
 
