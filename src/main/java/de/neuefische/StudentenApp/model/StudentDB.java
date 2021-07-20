@@ -1,5 +1,7 @@
 package de.neuefische.StudentenApp.model;
 
+import java.util.Random;
+
 public class StudentDB {
 
     private Student[] students;
@@ -25,7 +27,7 @@ public class StudentDB {
     }
 
     public Student getRandomStudent() {
-        int index = (int) (Math.random() * students.length);
+        int index = new Random().nextInt(students.length);
         return students[index];
     }
 
@@ -57,5 +59,6 @@ public class StudentDB {
             }
         }
         this.students = arrayOfStudents;
+
     }
 }
