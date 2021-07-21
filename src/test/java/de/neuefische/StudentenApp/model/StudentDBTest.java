@@ -31,10 +31,7 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         //Then
-        Student[] expected = {
-                new Student("Hans", "Maier", 1),
-                new Student("Markus", "Schneider", 2),
-                new Student("Peter", "Heiner", 3)};
+        Student[] expected = {student1, student2, student3};
         assertArrayEquals(expected, actual);
     }
 
@@ -64,11 +61,7 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // Then
-        Student[] expected = {
-                new Student("Hans", "Maier", 1),
-                new Student("Markus", "Schneider", 2),
-                new Student("Peter", "Heiner", 3),
-                new Student("Horst", "König", 4)};
+        Student[] expected = {student1, student2, student3, student4};
         assertArrayEquals(expected, actual);
     }
 
@@ -83,10 +76,7 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // Then
-        Student[] expected = {
-                new Student("Hans", "Maier", 1),
-                new Student("Markus", "Schneider", 2),
-                new Student("Peter", "Heiner", 3)};
+        Student[] expected = {student1, student2, student3};
         assertArrayEquals(expected, actual);
     }
 
@@ -101,10 +91,7 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // Then
-        Student[] expected = {
-                new Student("Hans", "Maier", 1),
-                new Student("Markus", "Schneider", 2),
-                new Student("Peter", "Heiner", 3)};
+        Student[] expected = {student1, student2, student3};
         assertArrayEquals(expected, actual);
     }
 
@@ -119,10 +106,7 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // Then
-        Student[] expected = {
-                new Student("Hans", "Maier", 1),
-                new Student("Markus", "Schneider", 2),
-                new Student("Peter", "Heiner", 3)};
+        Student[] expected = {student1, student2, student3};
         assertArrayEquals(expected, actual);
     }
 
